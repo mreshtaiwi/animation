@@ -1,0 +1,192 @@
+#holder{
+	margin: 0px auto;
+}
+#watch{
+	width: 250px;
+	height: 250px;
+	border:5px solid red;
+	border-radius: 50%;
+	background-image: url('../img/clock.jpeg');
+	background-size: cover;
+}
+#line{
+	font-size: 15px;
+	font-weight: bolder;
+	margin-left: 100px;
+	margin-top: 125px;
+	color: red;
+	height: 20px;
+	transform-origin: 20px 5px;
+	animation: moving 3s infinite linear;
+}
+#line span:first-child{
+	color: blue;
+}
+#line:hover{
+	animation-play-state: paused;
+}
+@keyframes moving {
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+#bouncein{
+	color: #00CED2;
+	display: inline-block;
+	margin-left: 100px;
+	animation: bouncein 3s ease-in-out infinite forwards;
+}
+@keyframes bouncein {
+	0%{
+		
+		transform: scale(0);
+	}
+	25%{
+		
+		transform: scale(3.5);
+	}
+	50%{
+		
+		transform: scale(2.5);
+	}
+	100%{
+		transform: scale(2.5);
+	}
+}
+#fallingdown{
+	margin-left: 800px;
+	word-spacing: 15px;
+	position: relative;
+	/*float: left;*/
+	top:-1000px;
+	opacity: 0.5;
+}
+.lightbule{
+	position: relative; 
+	color: lightblue;
+	animation: fallingdown 2.1s ease infinite;
+}
+.red{
+	color: red;
+	position: relative; 
+	animation: fallingdown 2.05s ease-in infinite;
+}
+.blue{
+	position: relative;  
+	color: blue;
+	animation: fallingdown 2.08s ease-out infinite ;
+}
+.yellow{
+	position: relative; 
+	color: yellow;
+	animation: fallingdown 2.09s ease-in-out infinite ;
+}
+.green{
+	position: relative; 
+	color: green;
+	animation: fallingdown 2.1s linear infinite;
+}
+.purple{
+	position: relative; 
+	color: purple;
+	animation: fallingdown 2.11s ease infinite;
+}
+
+@keyframes fallingdown {
+  0%   {  top:0px;}
+  25%  {  top:1300px;}
+  50%  { top:1240px;}
+  75%  { top:1300px;}
+  100% {  top:0px;}
+}
+/*@keyframes fallingdown {
+	10%  {top:0px; top:50px;}
+    20%  {top:50px; top:100px;}
+    30%  {top:100px; top:150px;}
+    40%  {top:150px; top:200px;}
+    50% {top:200px; top:250px;}
+    60%   {top:250px; top:300px;}
+    70%  {top:350px; top:400px;}
+    80%  {top:400px; top:450px;}
+    90%  {top:450px; top:500px;}
+    100% {top:500px; top:550px;}
+}*/
+#heartdiv{
+	width: 500px;
+	display: inline-block;
+}
+.heart{
+	font-size: 200px;
+	margin-left: 150px;
+	color:#FB7E6E;
+	animation: heartbeat 2s ease infinite;
+}
+@keyframes heartbeat {
+	/*0%{
+		font-size: 300px;
+	}
+	10%{
+		font-size: 350px;
+	}
+	20%{font-size: 360px;
+	}
+	30%{font-size: 350px;
+	}
+	40%{ font-size: 360px;
+	}
+	50%{ font-size: 300px;
+	}*/
+	0%{
+		transform: scale(1);
+	}
+	10%{
+		transform: scale(1.3);
+	}
+	20%{transform: scale(1.5);
+	}
+	30%{transform: scale(1);
+	}
+	40%{ transform: scale(1.3);
+	}
+	50%{ transform: scale(1.5);
+	}
+	70%{ transform: scale(1);
+	}
+	/*100%{ transform: scale(1);
+	}*/
+}
+.forwords{
+	text-align: center;
+	background-color: #00CED2;
+	padding: 20px;
+	border-radius: 20px;
+	width: 250px;
+	height: 50px;
+
+}
+.normal{
+	text-align: center;
+	background-color: #FF623F;
+	padding: 20px;
+	width: 250px;
+	height: 50px;
+	border-radius: 20px;
+}
+.main{
+	width: 350px;
+	margin-left: 100px;
+
+}
+.main:hover .forwords{
+	animation:  scaleandstay 1s ease forwards;
+	}
+.main:hover .normal{
+	animation:  scaleandstay 1s ease ;
+}
+
+@keyframes scaleandstay {
+	to{
+		transform: scale(1.3);
+	}
+}
